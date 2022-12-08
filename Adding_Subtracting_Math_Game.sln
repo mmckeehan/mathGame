@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Adding_Subtracting_Math_Game", "Adding_Subtracting_Math_Game\Adding_Subtracting_Math_Game.pyproj", "{9FD36ED7-815A-4CA8-A3FF-64845222607B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9FD36ED7-815A-4CA8-A3FF-64845222607B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FD36ED7-815A-4CA8-A3FF-64845222607B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35EDBA40-DB75-4407-9C57-82F62342B836}
+	EndGlobalSection
+EndGlobal
