@@ -1,9 +1,12 @@
-
 '''
-This is a game that is built to help 6-8 year olds with basic addition
-and subtraction. There should be no Negative numbers and the operations 
-should be random. This will go for 10 rounds and there will be a score
-given at the end
+This is a game that is built to help 6-8 
+    year olds with basic addition and subtraction. 
+There should be no Negative numbers and the 
+    operations should be random. 
+This will go for 10 rounds and there will 
+    be a score given at the end. 
+The player should then be able to choose 
+    to keep playing or exit
 '''
 
 import random
@@ -48,15 +51,15 @@ def game():
 
 
 
-while keepPlaying == "y":
+while True:
     while questNum < 11:
         game()
-        '''
-    print("Keep Playing? Y for yes, otherwise, press any key: ")
-    if input() == y:
-        global keeplaying = "y"
-        '''
+    print("You got ", scoreCorrect, " and", scoreIncorrect, " incorrect.")
+    kPAnsw = input("Keep Playing? Y for yes, otherwise, press any key: ")
+    if kPAnsw == keepPlaying:
+        game()
+        print("test")
+    else:
+        break
 
-
-print("You got ", scoreCorrect, " and", scoreIncorrect, " incorrect.")
-
+print("Thank's for playing!")
