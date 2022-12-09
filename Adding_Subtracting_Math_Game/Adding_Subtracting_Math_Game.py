@@ -7,34 +7,56 @@ given at the end
 '''
 
 import random
-import operator
-
-
+from operator import add, sub 
 
 questNum = int(1)
-scoreCorrect = int(0)
-scoreIncorrect = int(0)
+keepPlaying = "y"
 
-while questNum < 11:
-    num1 = int(random.randint(0,101))
-    num2 = int(random.randint(0,101))
-    operators = ["+","-"]
-    operator = random.choice(operators)
+
+def game():
+    global scoreCorrect
+    global scoreIncorrect
+    scoreCorrect = int(0)
+    scoreIncorrect = int(0)
+    global questNum
+
+    num1 = int(random.randint(0,100))
+    num2 = int(random.randint(0,100))
+    operators = {"+": add, "-": sub}
+    oplist = list(operators)
+    op = random.choice(oplist)
     print("Question number ", questNum,":")
-    print("Question: ",num1,operator,num2)
-    answ = input("Answer: ")
+    print("Question: ",num1,op,num2)
     while True:
         try:
-            int(answ)
+            answ = int(input("Answer: "))
         except ValueError:
             print("Please type a valid whole number.")
             continue
         else: 
+            if answ == operators[op](num1,num2):
+                print("Correct!")
+                print(".........")
+                scoreCorrect += 1
+            else:
+                scoreIncorrect += 1
+                print("Nope", operators[op](num1,num2))
+                print(".........")
+            questNum += 1
             break
-    if answ == (num1,operator,num2):
-        scoreCorrect +=1
-    else:
-        scoreIncorrect +=1
-    questNum +=1
+    
+
+
+
+while keepPlaying == "y":
+    while questNum < 11:
+        game()
+        '''
+    print("Keep Playing? Y for yes, otherwise, press any key: ")
+    if input() == y:
+        global keeplaying = "y"
+        '''
+
 
 print("You got ", scoreCorrect, " and", scoreIncorrect, " incorrect.")
+
